@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website With Payment</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- link Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet">
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- base url -->
+    <base href="/">
+
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <!-- nav -->
+      <div class="nav container">
+        <!-- logo -->
+        <a href="#" class="logo">Ecommerce</a>
+        <!-- cart-icon  -->
+        <i class ="bx bx-cart" id="cart-icon" data-quantity="0"></i>
+      </div>
+      <!-- ----------------------------------------------->
+      <!-- user login and register funtionality -->
+      <!-- <div class="user-details">
+        <a href="">Login</a>
+        <a href="">Register</a>
+      </div> -->
+      <!-- ------------------------------------------------>
+      <!-- cart -->
+      <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <!-- content -->
+        <div class="cart-content"></div>
+        <!-- total -->
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+        <!-- Buy Button -->
+        <button type="button" class="btn-buy">Pay Now</button>
+        <!-- close-cart -->
+        <i class="fa-solid fa-x" id="close-cart"></i>
+      </div>     
+    </header>
+    <!-- header section End  -->
+    <!-- product section start -->
+    <section class="shop container">
+      <h2 class="section-title">Shop Products</h2>
+      <!-- Shop Content -->
+      <div class="shop-content">
+        <!-- Box 1 -->
+        <div class="product-box">
+          <!-- stripe need images that are on online on local server it will not show in stripe checkout page. we have to upload online. -->
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZM_kODAnmCdx3pFrPqSlXH16sdbMxyHTQzZRSG2IXwdVVZcIVv7zBcy2Zf8Lm1i0jfQ_OmL-aQ120OVoVNITDDmFuN3mnEVZMf6cKc16iQwiG6n8AlGSEjeGHZSXmZmMOQdxjBk2Zt1mhzs8PnZsNBwxAO6tYzRsQbSvy3aBmgG_2Tihfsalk8egEtSo/s320/product1.jpeg" alt="" class="product-img">
+          <h2 class="product-title">ADICOLOR SEASONAL</h2>
+          <span class="price">$50</span>
+          <!-- boxicons not working so i include the fontawesome icon here -->
+          <!-- <i class="bx bx-shopping-bag add-cart"></i> -->
+          <i class="bx bxs-cart-add add-cart"></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="product-box">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrsDTIM3RN9uqXSfAjdCTYdbT8Jkj5HDT4tXE3tu5NqZfwNOXEqD0nFMWXWyYMHA43l_mDS6bTuwwBsHmRfPQ5MdzJGtzp2Sn2oPBktKgMniK6jAvIl8IXpTA29pedYiWwEoqZh-SGOU-uwy648KS8Dceaq_9Gzi778c3xbBcy7anrP6RRnLJDKRfw_7Q/s320/product2.jpeg" alt="" class="product-img">
+          <h2 class="product-title">SATURDAY BACKPACK</h2>
+          <span class="price">$70.99</span>
+
+          <!-- <i class="bx bx-shopping-bag add-cart"></i> -->
+          <i class="bx bxs-cart-add add-cart"></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="product-box">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgqG1pOZUGuDA8QgCl0ossBF0WcgwKsUYOs4fMK_ABuYz7CR3ucNFofz3SCQl3eiDdByJ2yXjsht-vNs1SQ2YilACRUSknMH7SnHufAr3nrY13f_5_IF4ckuniI_eKYwKwylN7R1cM_mBnNhaSHJ0oT8jHe4ywD-FaQ6xhBMdTq4pIAwp7yuGRUHus3Rw/s320/product3.jpeg" alt="" class="product-img">
+          <h2 class="product-title">ULTIMATE HAT</h2>
+          <span class="price">$24.98</span>
+          <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+          <i class="bx bxs-cart-add add-cart"></i>
+
+        </div>
+        <!-- Box 4 -->
+        <div class="product-box">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpR4npA_0tL1uZGuywNsUhIsGzaBpNSCw_PXhWDyatH1Mlv6xPRRsU3iuCCoXpPpYxF2WtohyphenhyphenUFFhKQyL_fzC4J9684MmoXp7UdPvoaaFTgLHEI00QIkg4BnaZxbZX9pwqYxlLa70Jp4nTmkfpksqFctUOuLdIx0d7c0mlvqZPPncuguhlHVD1xqcno90/s320/product4.jpeg" alt="" class="product-img">
+          <h2 class="product-title">MESSI GOAT TEE</h2>
+          <span class="price">$100</span>
+          <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+          <i class="bx bxs-cart-add add-cart"></i>
+
+        </div>
+        <!-- Box 5 -->
+        <div class="product-box">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLQWmdjhTf1DvSvAyrxLcESEZpcQDQgoFjG5CUr_ZyNO-skA1M4DcXmSNZmaRghevZXfH9zFOw428Jo6bGUIcGYKbp9SHrxMP6towU-FYKNMISslFhw_XLYdSQbOUQYwc_veHxiBGCQpflT3fnNVzwgDECvtdBe32niJfIn4Pa9nkiPkGk8yesl7tT-d4/s320/product5.jpeg" alt="" class="product-img">
+          <h2 class="product-title">ADICOLOR HOODIE</h2>
+          <span class="price">$74.50</span>
+          <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+          <i class="bx bxs-cart-add add-cart"></i>
+
+        </div>
+        <!-- Box 6 -->
+        <div class="product-box">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRU8LA3Pa7vhdWJr06-BlHw95GodpUn6U7rusrS1hnawityXshxaFTS_8u-C_8Myo8b0YUO0ac7h31J5zzSGD9HGFC0oLlMWy_DZdc3ClptXIBNIjDzUsw-5jPHjs6bi3Xx7KkQcE893th3DFkRxT0Y9fjq6m5nMIRAhQ8WcNQUu8jVTghO4qnaDTcfLQ/s320/product6.jpeg" alt="" class="product-img">
+          <h2 class="product-title">ADIDAS EARBUDS</h2>
+          <span class="price">$200</span>
+          <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+          <i class="bx bxs-cart-add add-cart"></i>
+
+        </div>
+        <!-- Box 7 -->
+        <div class="product-box">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCBLbXJdPKhxy3h3D422fOAh4JF7xT80KjY0nN1aeyDAWCJuzQQ5RMrXKhLMfee6_LRK_GFDV9RXwI6pwbc5PWqvyNchQq01Fe-d_IQqTtvdlBxq0_dhBmW1FZMoZ524j0d_EGcz7_a4GrBKqfJB87tuO8u-qJG7v-g9ebW4QSzySTIClT7sVBj8VQx8Q/s320/product7.jpeg" alt="" class="product-img">
+          <h2 class="product-title">METAL BOTTLE 1L</h2>
+          <span class="price">$80.04</span>
+          <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+          <i class="bx bxs-cart-add add-cart"></i>
+
+        </div>
+        <!-- Box 8-->
+        <div class="product-box">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYW1N_1rTf_sZd_NMA5846VnFkTuIzj7COvfrabXdWYg-0mgl4SPKk4oYEt9WylmjTe4ZoZnrtgvxteBlvMOIpkTSdpGNkQUVIx4s6pWzxu8pPji8x0xCr3k5DtAKAe3w3AUAAwy_-M53lChkUO9AwZP_aZli4ZSaCTsSB5NP0aHr6bwzIP4CKuaLCDPY/s320/product8.jpeg" alt="" class="product-img">
+          <h2 class="product-title">ULTRABOOST SHOES</h2>
+          <span class="price">$280</span>
+          <!-- <i class='bx bx-shopping-bag add-cart'></i> -->
+          <i class="bx bxs-cart-add add-cart"></i>
+        </div>
+      </div>
+    </section>
+    <!-- link to js -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

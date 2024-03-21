@@ -1,0 +1,1 @@
+ <!-- stripe need images that are on online on local server it will not show in stripe checkout page. we have to upload online. -->
